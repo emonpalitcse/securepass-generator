@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecurePass Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 SecurePass Generator</h1>
+
+    <div class="generator-card">
+      <div class="password-display">
+        <input type="text" id="password" readonly placeholder="Your secure password" />
+        <button id="copyBtn" title="Copy to Clipboard">📋</button>
+      </div>
+
+      <div class="options">
+        <label>Password Length: <span id="lengthVal">16</span></label>
+        <input type="range" min="8" max="32" value="16" id="lengthSlider" />
+
+        <label><input type="checkbox" id="includeLower" checked /> Include Lowercase</label>
+        <label><input type="checkbox" id="includeUpper" checked /> Include Uppercase</label>
+        <label><input type="checkbox" id="includeNumber" checked /> Include Numbers</label>
+        <label><input type="checkbox" id="includeSymbol" checked /> Include Symbols</label>
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn">🔁 Generate Password</button>
+        <button id="resetBtn">♻️ Reset</button>
+        <span id="strength">Strength: <strong>Normal</strong></span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <label><input type="checkbox" id="darkModeToggle" /> Dark Mode</label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
